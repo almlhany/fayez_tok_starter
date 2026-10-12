@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#111111"><title>FayezTok</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><strong>FayezTok</strong><button id="authBtn">دخول / حساب جديد</button></header>
+<main>
+<section id="authPanel" class="panel">
+<h2>أهلًا بك 👋</h2><p>أنشئ حسابًا لمشاهدة الفيديوهات والتفاعل معها.</p>
+<input id="email" type="email" placeholder="البريد الإلكتروني" autocomplete="email">
+<input id="password" type="password" placeholder="كلمة المرور (6 أحرف على الأقل)" autocomplete="current-password">
+<div class="actions"><button id="signup">إنشاء حساب</button><button id="login" class="secondary">تسجيل الدخول</button></div>
+<button id="logout" class="secondary hidden">تسجيل الخروج</button><p id="authMsg" class="msg"></p>
+</section>
+<section class="feed-head"><h2>الفيديوهات</h2><span id="userStatus">لست مسجلًا</span></section>
+<section id="uploadPanel" class="panel hidden">
+<h3>انشر فيديو</h3><input id="videoFile" type="file" accept="video/*"><input id="caption" maxlength="180" placeholder="اكتب وصف الفيديو">
+<button id="upload">رفع ونشر الفيديو</button><p class="hint">الفيديوهات تُرفع إلى مساحة التخزين السحابية المرتبطة بمشروعك.</p><p id="uploadMsg" class="msg"></p>
+</section>
+<section id="feed" class="feed"><p class="hint">سجّل الدخول ثم انشر أول فيديو، أو انتظر ظهور فيديوهات المجتمع.</p></section>
+</main>
+<nav class="bottom"><button onclick="window.scrollTo({top:0,behavior:'smooth'})">⌂<small>الرئيسية</small></button><button onclick="document.querySelector('#uploadPanel').scrollIntoView({behavior:'smooth'})">＋<small>نشر</small></button><button onclick="document.querySelector('#authPanel').scrollIntoView({behavior:'smooth'})">♙<small>حسابي</small></button></nav>
+<script type="module" src="app.js"></script>
+</body></html>
